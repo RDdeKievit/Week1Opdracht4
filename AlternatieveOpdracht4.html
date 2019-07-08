@@ -11,11 +11,6 @@
     }
     count(totaalprijs);    
   
-/*
-    function getSum(total, num) {
-        return total + Math.round(num);  //totaal.reduce(getSum, 0);
-    }
-*/
     function toevoegen(prijs){
         totaalprijs.push(prijzen[prijs]);
         document.getElementById("totaalprijsDiv").innerHTML = "€ " + count(totaalprijs);
