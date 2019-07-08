@@ -1,0 +1,36 @@
+<script>
+   var prijzen = [0.50, 0.25, 0.30, 0.10, 0.05];
+   var totaalprijs = [];
+   
+   function count(x){
+        var y = 0
+        for (var i = 0; i < x.length; i++) {
+            y = y + x[i]
+        }
+        return(y)
+    }
+    count(totaalprijs);    
+  
+/*
+    function getSum(total, num) {
+        return total + Math.round(num);  //totaal.reduce(getSum, 0);
+    }
+*/
+    function toevoegen(prijs){
+        totaalprijs.push(prijzen[prijs]);
+        document.getElementById("totaalprijsDiv").innerHTML = "€ " + count(totaalprijs);
+        console.log(totaalprijs);
+    }
+	
+</script>
+<style>
+
+</style>
+Totaalprijs:
+<div id=totaalprijsDiv></div><br>
+
+<input type=button onclick="toevoegen([0])" value="Appel">
+<input type=button onclick="toevoegen([1])" value="Banaan">
+<input type=button onclick="toevoegen([2])" value="Kiwi"><br>
+<input type=button onclick="toevoegen([3])" value="Aardbei">
+<input type=button onclick="toevoegen([4])" value="Blauwe Bes">
